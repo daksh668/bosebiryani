@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sorry, Suzan 🐘 — a hug from Mota Hathi</title>
+  <meta name="description" content="A little sorry, a sad elephant and a very big hug — for Suzan." />
+  <meta name="theme-color" content="#fde8f1" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Envelope intro (shown on load) -->
+  <div class="intro" id="intro" hidden>
+    <p class="intro__eyebrow" id="intro-title">You've got a letter, Suzan</p>
+    <button class="envelope" id="envelope" type="button" aria-label="Open the letter">
+      <span class="envelope__back"></span>
+      <span class="envelope__letter">
+        <span class="envelope__note">Dear Suzan,<br />I have something to say… <span aria-hidden="true">🥺</span></span>
+      </span>
+      <span class="envelope__front"></span>
+      <span class="envelope__flap"></span>
+      <span class="envelope__seal" aria-hidden="true">💌</span>
+    </button>
+    <button class="btn btn--hug intro__open" id="open-envelope" type="button">Open it <span aria-hidden="true">💌</span></button>
+    <p class="intro__from">from Mota Hathi <span aria-hidden="true">🐘</span> &amp; someone who's really sorry</p>
+  </div>
+
+  <!-- Decorative background -->
+  <div class="sky" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="cloud cloud--1"></span>
+    <span class="cloud cloud--2"></span>
+    <span class="cloud cloud--3"></span>
+    <div class="floaties" id="floaties"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-goto="0" aria-label="Sorry, Suzan — back to start">
+      <span class="brand__mark" aria-hidden="true">🐘</span>
+      <span class="brand__name">Sorry, Suzan</span>
+    </a>
+    <div class="topbar__tools">
+      <p class="hug-count" aria-live="polite"><span aria-hidden="true">🤍</span> <span id="hug-count">0</span> <span class="hug-count__label">hugs</span></p>
+      <button class="chip" id="motion-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">🌙</span> <span class="chip__text">Calm mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="stage" tabindex="-1">
+
+    <!-- 1 · Sorry -->
+    <section class="scene scene--sorry" data-title="Sorry" aria-labelledby="h-sorry">
+      <div class="card card--hero">
+        <button class="boop" type="button" aria-label="Boop sad Mota Hathi to cheer her up">
+          <span class="elephant-slot" id="sorry-ellie" data-pose="sad"></span>
+        </button>
+        <p class="eyebrow">psst… Mota Hathi wants to say</p>
+        <h1 class="title" id="h-sorry" tabindex="-1">I'm sorry, Suzan <span aria-hidden="true">🥺</span></h1>
+        <p class="nickname">
+          <span class="sr-only">Sorry, mera hathi, teddy bear, bubu, babu, baby.</span>
+          <span aria-hidden="true">sorry, <span class="nickname__word" id="nickname">mera hathi 🐘</span></span>
+        </p>
+        <p class="lead">I know I hurt you, and Mota Hathi's ears have been drooping ever since. Will you forgive me… and let her give you the biggest elephant hug?</p>
+        <div class="btn-row">
+          <button class="btn btn--hug" type="button" data-action="hug">
+            <span class="btn__icon" aria-hidden="true">🤗</span> Forgive &amp; hug
+          </button>
+          <button class="btn btn--ghost" type="button" data-action="shy">Nahi, abhi gussa hoon <span aria-hidden="true">😤</span></button>
+        </div>
+        <p class="hint"><span aria-hidden="true">👆</span> Tip: boop sad Mota Hathi to cheer her up</p>
+      </div>
+    </section>
+
+    <!-- 2 · Sorry letter -->
+    <section class="scene scene--note" data-title="Dil se sorry" aria-labelledby="h-note" hidden>
+      <article class="card card--letter">
+        <span class="elephant-slot elephant-slot--small letter__ellie" data-pose="sad"></span>
+        <h2 class="title title--script" id="h-note" tabindex="-1">Dil se sorry, Suzan <span aria-hidden="true">💌</span></h2>
+        <p class="letter__to">Dear Suzan, mera hathi,</p>
+        <div class="letter__body">
+          <p>I'm really, truly sorry for hurting you. You deserved patience and kindness, and I didn't give you that. No excuses — I was wrong.</p>
+          <p>You're my teddy bear, my bubu, my babu, my baby — and seeing you upset breaks my heart into a hundred little rasmalai pieces.</p>
+          <p>I promise to listen more, fight less, and always show up with gulab jamun when I mess up.</p>
+          <p>Will you give me one more chance? Mota Hathi is holding a hug for you, just in case.</p>
+        </div>
+        <p class="letter__sign">Sorry, and so much love,<br /><span>Mota Hathi <span aria-hidden="true">🐘</span> (and me)</span></p>
+        <button class="btn btn--primary" type="button" data-next>There's more <span aria-hidden="true">→</span></button>
+      </article>
+    </section>
+
+    <!-- 3 · Music + joys -->
+    <section class="scene scene--music" data-title="Our song" aria-labelledby="h-music" hidden>
+      <h2 class="title title--script" id="h-music" tabindex="-1">Our song &amp; little joys <span aria-hidden="true">🎶</span></h2>
+      <div class="music-grid">
+        <div class="card card--player">
+          <div class="player__head">
+            <div class="vinyl" aria-hidden="true"><span class="vinyl__label">🐘</span></div>
+            <div>
+              <p class="eyebrow eyebrow--tight">Now dreaming of</p>
+              <h3 class="player__title">“Lover”</h3>
+              <p class="player__artist">Taylor Swift</p>
+            </div>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Choose a music player">
+            <button class="tab" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true" type="button">Spotify</button>
+            <button class="tab" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1" type="button">YouTube</button>
+          </div>
+
+          <div class="tabpanel" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" tabindex="0">
+            <div class="embed embed--spotify" data-embed="spotify"
+                 data-src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator&amp;theme=0"
+                 data-title="Spotify player: Lover by Taylor Swift">
+              <button class="embed__load" type="button">
+                <span class="embed__play" aria-hidden="true">▶</span>
+                <span>Load the official Spotify player</span>
+              </button>
+            </div>
+            <a class="ext-link" href="https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI" target="_blank" rel="noopener noreferrer">Open “Lover” on Spotify <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+          </div>
+
+          <div class="tabpanel" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube" tabindex="0" hidden>
+            <div class="embed embed--youtube" data-embed="youtube"
+                 data-src="https://www.youtube-nocookie.com/embed/-BjZmE2gtdo?rel=0&amp;modestbranding=1"
+                 data-title="YouTube player: Taylor Swift – Lover (Official Music Video)">
+              <button class="embed__load" type="button">
+                <span class="embed__play" aria-hidden="true">▶</span>
+                <span>Load the official music video</span>
+              </button>
+            </div>
+            <p class="embed__warn" hidden>YouTube embeds need the site to be served over <code>http://</code> — see the README. You can still watch it on YouTube below.</p>
+            <a class="ext-link" href="https://www.youtube.com/watch?v=-BjZmE2gtdo" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+          </div>
+
+          <p class="fineprint">No audio is hosted here — music streams only through the official Spotify / YouTube embeds, and nothing loads until you tap.</p>
+        </div>
+
+        <div class="card card--joys">
+          <h3 class="subhead">Things that make Mota Hathi's ears flap <span aria-hidden="true">💗</span></h3>
+          <ul class="joys" id="joys">
+            <li class="polaroid" style="--tilt:-4deg; --tint: var(--butter)"><span class="polaroid__art" aria-hidden="true"><svg viewBox="8 18 84 70" class="sweet"><path d="M12 50 h76 a38 32 0 0 1 -76 0z" fill="#fff" stroke="#e6dcff" stroke-width="3"/><ellipse cx="50" cy="50" rx="38" ry="9" fill="#ffe39a"/><ellipse cx="36" cy="49" rx="11" ry="4.5" fill="#fffaf0" stroke="#efdcae"/><ellipse cx="62" cy="50" rx="11" ry="4.5" fill="#fffaf0" stroke="#efdcae"/><ellipse cx="50" cy="45" rx="11" ry="4.5" fill="#fffaf0" stroke="#efdcae"/><g fill="#8bc34a"><rect x="33" y="46" width="4" height="2" rx="1"/><rect x="48" y="43" width="4" height="2" rx="1"/><rect x="62" y="48" width="4" height="2" rx="1"/></g><g stroke="#f08a24" stroke-width="1.4" stroke-linecap="round"><path d="M40 48 l3 -1"/><path d="M55 45 l3 1"/><path d="M58 51 l2 -2"/></g></svg></span><span class="polaroid__cap">Rasmalai dates</span></li>
+            <li class="polaroid" style="--tilt:3deg; --tint: var(--sky)"><span class="polaroid__art" aria-hidden="true">🧸</span><span class="polaroid__cap">Teddy bear cuddles</span></li>
+            <li class="polaroid" style="--tilt:2deg; --tint: var(--peach)"><span class="polaroid__art" aria-hidden="true"><svg viewBox="8 18 84 70" class="sweet"><path d="M12 50 h76 a38 32 0 0 1 -76 0z" fill="#fff" stroke="#e6dcff" stroke-width="3"/><ellipse cx="50" cy="50" rx="38" ry="9" fill="#f3b765"/><circle cx="36" cy="45" r="11" fill="#8a3b1f"/><circle cx="63" cy="45" r="11" fill="#8a3b1f"/><circle cx="50" cy="38" r="11" fill="#9c4524"/><ellipse cx="32" cy="41" rx="3.5" ry="2.5" fill="#d07a4a"/><ellipse cx="59" cy="41" rx="3.5" ry="2.5" fill="#d07a4a"/><ellipse cx="46" cy="34" rx="3.5" ry="2.5" fill="#d07a4a"/></svg></span><span class="polaroid__cap">Gulab jamun nights</span></li>
+            <li class="polaroid" style="--tilt:-3deg; --tint: var(--lilac)"><span class="polaroid__art" aria-hidden="true">🫶</span><span class="polaroid__cap">You, Suzan</span></li>
+            <li class="polaroid polaroid--add" style="--tilt:1deg">
+              <label class="add-photo">
+                <input type="file" accept="image/*" id="photo-input" class="sr-only" />
+                <span class="add-photo__plus" aria-hidden="true">+</span>
+                <span>Add a photo</span>
+              </label>
+            </li>
+          </ul>
+          <p class="fineprint">Photos stay on your device and disappear when you close the page.</p>
+        </div>
+      </div>
+      <div class="scene__cta">
+        <button class="btn btn--primary" type="button" data-next>One last thing <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- 4 · Thanks -->
+    <section class="scene scene--thanks" data-title="Thank you" aria-labelledby="h-thanks" hidden>
+      <div class="card card--hero">
+        <span class="elephant-slot elephant-slot--dance" data-pose="dance"></span>
+        <h2 class="title" id="h-thanks" tabindex="-1">Thank you for forgiving me, baby! <span aria-hidden="true">🥰</span></h2>
+        <p class="lead">Elephants never forget — and Mota Hathi will <em>never</em> forget how kind you are, Suzan.</p>
+        <p class="script-line">Love you, mera teddy bear <span aria-hidden="true">♡</span></p>
+        <button class="btn btn--primary" type="button" data-action="surprise">A surprise for you <span aria-hidden="true">🎁</span></button>
+      </div>
+    </section>
+
+    <!-- 5 · For you -->
+    <section class="scene scene--foryou" data-title="For you" aria-labelledby="h-foryou" hidden>
+      <h2 class="title title--big title--script" id="h-foryou" tabindex="-1">For You, Suzan</h2>
+      <p class="lead lead--center">A bunch of balloons and a few promises, bubu <span aria-hidden="true">🎈</span></p>
+      <div class="balloon-hero" aria-hidden="true">
+        <svg class="balloons" viewBox="0 0 220 200">
+          <g class="balloon b1"><path d="M110 196 C 100 160, 70 140, 62 92" class="string"/><ellipse cx="62" cy="62" rx="30" ry="36" fill="#ffb6cf"/><path d="M57 98 l5 -6 l5 6z" fill="#ffb6cf"/><ellipse cx="52" cy="48" rx="7" ry="11" fill="#fff" opacity=".55"/></g>
+          <g class="balloon b2"><path d="M110 196 C 112 150, 108 120, 110 70" class="string"/><ellipse cx="110" cy="40" rx="32" ry="38" fill="#c9b8ff"/><path d="M105 78 l5 -6 l5 6z" fill="#c9b8ff"/><ellipse cx="99" cy="25" rx="7" ry="11" fill="#fff" opacity=".55"/></g>
+          <g class="balloon b3"><path d="M110 196 C 122 160, 150 140, 158 92" class="string"/><ellipse cx="158" cy="62" rx="30" ry="36" fill="#a8e6cf"/><path d="M153 98 l5 -6 l5 6z" fill="#a8e6cf"/><ellipse cx="148" cy="48" rx="7" ry="11" fill="#fff" opacity=".55"/></g>
+          <g class="balloon b4"><path d="M110 196 C 96 170, 40 160, 28 128" class="string"/><ellipse cx="26" cy="104" rx="22" ry="26" fill="#ffe08a"/><ellipse cx="19" cy="94" rx="5" ry="8" fill="#fff" opacity=".55"/></g>
+          <g class="balloon b5"><path d="M110 196 C 124 170, 180 160, 192 128" class="string"/><ellipse cx="194" cy="104" rx="22" ry="26" fill="#a9d6ff"/><ellipse cx="187" cy="94" rx="5" ry="8" fill="#fff" opacity=".55"/></g>
+        </svg>
+        <span class="elephant-slot elephant-slot--small" data-pose="hold"></span>
+      </div>
+      <ul class="promises">
+        <li class="promise" style="--i:0; --tint: var(--lilac)"><span class="promise__icon" aria-hidden="true">🌙</span>I'll be your night-light on scary nights</li>
+        <li class="promise" style="--i:1; --tint: var(--butter)"><span class="promise__icon" aria-hidden="true">👂</span>I'll listen first and fight less</li>
+        <li class="promise" style="--i:2; --tint: var(--mint)"><span class="promise__icon" aria-hidden="true">🦋</span>I'll cheer the loudest for your dreams</li>
+        <li class="promise" style="--i:3; --tint: var(--peach)"><span class="promise__icon" aria-hidden="true">🍮</span>I'll share my rasmalai &amp; gulab jamun (yes, all of them)</li>
+        <li class="promise" style="--i:4; --tint: var(--sky)"><span class="promise__icon" aria-hidden="true">☂️</span>A trunk-umbrella whenever it rains</li>
+        <li class="promise" style="--i:5; --tint: var(--blush)"><span class="promise__icon" aria-hidden="true">💗</span>Sorry hugs on demand, forever, babu</li>
+      </ul>
+      <p class="forever">Sorry &amp; love you to the moon and back, babu <span aria-hidden="true">💕</span></p>
+      <div class="btn-row btn-row--center">
+        <button class="btn btn--hug" type="button" data-action="hug"><span class="btn__icon" aria-hidden="true">🤗</span> One more hug</button>
+        <button class="btn btn--ghost" type="button" data-goto="0">Start over</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">Made with rasmalai <span aria-hidden="true">🍮</span>, gulab jamun <span aria-hidden="true">🟤</span> &amp; love <span aria-hidden="true">💕</span></footer>
+  </main>
+
+  <nav class="pager" aria-label="Story pages">
+    <button class="pager__arrow" type="button" id="prev" aria-label="Previous page">‹</button>
+    <ol class="pager__dots" id="dots"></ol>
+    <button class="pager__arrow" type="button" id="next" aria-label="Next page">›</button>
+  </nav>
+
+  <!-- Always-available hug button -->
+  <button class="fab-hug" type="button" data-action="hug" aria-label="Get a sorry hug from Mota Hathi">
+    <span aria-hidden="true">🐘</span><span class="fab-hug__text">Hug</span>
+  </button>
+
+  <!-- "Maybe later" popup -->
+  <dialog class="modal" id="shy-dialog" aria-labelledby="shy-title">
+    <span class="elephant-slot elephant-slot--small" data-pose="sad"></span>
+    <h2 class="modal__title" id="shy-title">Pretty please, baby? <span aria-hidden="true">🥺</span></h2>
+    <p>Mota Hathi can't stop crying until you forgive me… just one tiny hug, bubu?</p>
+    <div class="btn-row btn-row--center">
+      <button class="btn btn--hug" type="button" data-action="hug">Okay, ek hug <span aria-hidden="true">🤍</span></button>
+      <button class="btn btn--ghost" type="button" data-close>Still gussa</button>
+    </div>
+  </dialog>
+
+  <!-- Hug animation -->
+  <dialog class="hug" id="hug-dialog" aria-labelledby="hug-caption">
+    <div class="hug__glow" aria-hidden="true"></div>
+    <div class="hug__stage">
+      <span class="elephant-slot elephant-slot--hug" data-pose="hug"></span>
+      <div class="hug__burst" id="hug-burst" aria-hidden="true"></div>
+    </div>
+    <p class="hug__caption" id="hug-caption" aria-live="polite">Here comes a hug…</p>
+    <div class="btn-row btn-row--center hug__actions">
+      <button class="btn btn--hug" type="button" id="hug-again">Hug again <span aria-hidden="true">🤗</span></button>
+      <button class="btn btn--ghost" type="button" data-close>Close</button>
+    </div>
+  </dialog>
+
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+  <p class="sr-only" id="announcer" aria-live="polite"></p>
+
+  <noscript><p class="noscript">Mota Hathi needs JavaScript turned on to give hugs 🐘</p></noscript>
+
+  <!-- Mota Hathi the elephant (cloned into every .elephant-slot) -->
+  <template id="elephant-tpl">
+    <svg class="elephant" viewBox="0 0 240 270" aria-hidden="true" focusable="false">
+      <ellipse class="el-shadow" cx="120" cy="260" rx="64" ry="8" />
+      <g class="el-bob">
+        <g class="el-body">
+          <ellipse class="sk" cx="120" cy="206" rx="58" ry="50" />
+          <ellipse class="belly" cx="120" cy="216" rx="34" ry="30" />
+          <ellipse class="sk-d" cx="90" cy="250" rx="21" ry="12" />
+          <ellipse class="sk-d" cx="150" cy="250" rx="21" ry="12" />
+          <g class="toe"><circle cx="82" cy="254" r="3.5"/><circle cx="91" cy="256" r="3.5"/><circle cx="100" cy="254" r="3.5"/><circle cx="140" cy="254" r="3.5"/><circle cx="149" cy="256" r="3.5"/><circle cx="158" cy="254" r="3.5"/></g>
+        </g>
+        <g class="el-ear el-ear--l">
+          <ellipse class="sk-d" cx="58" cy="98" rx="47" ry="53" />
+          <ellipse class="ear-in" cx="62" cy="100" rx="31" ry="37" />
+        </g>
+        <g class="el-ear el-ear--r">
+          <ellipse class="sk-d" cx="182" cy="98" rx="47" ry="53" />
+          <ellipse class="ear-in" cx="178" cy="100" rx="31" ry="37" />
+        </g>
+        <g class="el-head">
+          <circle class="sk" cx="120" cy="100" r="60" />
+          <path class="line" d="M110 44 q5 -12 10 0 q5 -12 10 0" />
+          <g class="bow" transform="translate(156 52) rotate(18)">
+            <path d="M0 0 L-16 -10 Q-20 0 -16 10 Z" />
+            <path d="M0 0 L16 -10 Q20 0 16 10 Z" />
+            <circle r="5" class="bow-knot" />
+          </g>
+          <g class="el-eyes">
+            <g class="eye-open">
+              <ellipse class="ink" cx="97" cy="96" rx="7.5" ry="9.5" />
+              <ellipse class="ink" cx="143" cy="96" rx="7.5" ry="9.5" />
+              <circle class="shine" cx="100" cy="92" r="3" />
+              <circle class="shine" cx="146" cy="92" r="3" />
+              <circle class="shine" cx="95" cy="100" r="1.4" />
+              <circle class="shine" cx="141" cy="100" r="1.4" />
+            </g>
+            <g class="eye-happy">
+              <path class="ink-line" d="M89 98 q8 -10 16 0" />
+              <path class="ink-line" d="M135 98 q8 -10 16 0" />
+            </g>
+            <g class="eye-sad">
+              <ellipse class="ink" cx="97" cy="98" rx="7" ry="8" />
+              <ellipse class="ink" cx="143" cy="98" rx="7" ry="8" />
+              <circle class="shine" cx="99" cy="95" r="2.6" />
+              <circle class="shine" cx="145" cy="95" r="2.6" />
+              <path class="ink-line thin" d="M87 84 l14 -5" />
+              <path class="ink-line thin" d="M153 84 l-14 -5" />
+              <ellipse class="tear" cx="88" cy="110" rx="3" ry="4.5" />
+            </g>
+          </g>
+          <ellipse class="cheek" cx="80" cy="118" rx="10" ry="6" />
+          <ellipse class="cheek" cx="160" cy="118" rx="10" ry="6" />
+          <path class="ink-line thin el-smile" d="M134 128 q6 6 12 0" />
+        </g>
+        <g class="el-trunk">
+          <path class="trunk" d="M120 112 C 118 140, 110 156, 122 168 C 132 177, 148 173, 150 160" />
+          <path class="line" d="M110 132 q9 4 18 0" />
+          <path class="line" d="M109 143 q8 4 16 0" />
+          <path class="line" d="M111 154 q7 4 13 -1" />
+          <circle class="sk-d" cx="150" cy="158" r="2.2" />
+        </g>
+        <path class="el-heart" d="M120 230 C 99 215, 94 197, 107 189 C 113.5 185, 118.7 189, 120 194 C 121.3 189, 126.5 185, 133 189 C 146 197, 141 215, 120 230 Z" />
+        <g class="el-arm el-arm--l">
+          <rect class="sk" x="64" y="164" width="26" height="56" rx="13" />
+          <path class="line" d="M70 214 v4 M77 215 v4 M84 214 v4" />
+        </g>
+        <g class="el-arm el-arm--r">
+          <rect class="sk" x="150" y="164" width="26" height="56" rx="13" />
+          <path class="line" d="M156 214 v4 M163 215 v4 M170 214 v4" />
+        </g>
+      </g>
+    </svg>
+  </template>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
